@@ -8,7 +8,9 @@ body{
   background-color: violet;
   font-family: monospace;
 }
-h1{
+/* TIPOGRAFIA */
+h1,
+h2{
   color:white;
   font-size: 30px;
   padding: 20px;
@@ -19,6 +21,7 @@ h1{
 .tx-sx{
   text-align: left;
 }
+/* STILE */
 .form-dati{
   background-color: white;
   max-width: 1300px;
