@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>live</title>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>calcola il prezzo del tuo biglietto</h1>
+    <div class="form-dati">
+
+      <div class="row">
+        <div class="col">
+          <label for"nome" >Nome Cognome</label>
+          <input type="text" placeholder="inserisci">
+        </div>
+        <div class="col">
+          <label for"km">km</label>
+          <input type="number" placeholder="km">
+        </div>
+        <div class="col">
+          <label for "eta">età</label>
+          <select name="" id="">
+            <option value="minorenne">minorenne</option>
+            <option value="maggiorenne">maggiorenne</option>
+            <option value="over">over65</option>
+
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="bnt">Genera</div>
+        <div class="bnt">Annulla</div>
+      </div>
+    </div>
+
+    <!-- DETTAGLIO -->
+      <h2>il tuo biglietto</h2>
+      <div id="biglietto">
+
+
+      <div class="contenitore-dettaglio">
+        <h3>dettaglio passeggero</h3>
+        <div class="dettaglio-biglietto row">
+          <div class="col">
+            <h3>nome passeggero</h3>
+          </div>
+          <div class="col">
+            <table>
+              <tr>
+                <th>offerta</th>
+                <th>carrozza</th>
+                <th>codice cp</th>
+                <th>costo biglietto</th>
+              </tr>
+                <td><span id="offerta-applicata"></span></td>
+                <td><span id="carrozza"></span></td>
+                <td><span ></span></td>
+                <td></td>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="js/script.js" charset="utf-8"></script>
+
+</body>
+</html>
