@@ -1,92 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Treno della sila</title>
+  <title>Monorotaia di Springfield</title>
 </head>
 <body>
+  <!-- NAVBAR -->
   <div class="navbar">
-
-      <div class="logo">
-        <img src="img/logo.jpg" alt="logo">
+    <div class="logo">
+      <img src="img/logo.jpg" alt="logo">
         <!-- <img src="https://cdn.shopify.com/s/files/1/0748/0217/products/monorail_miller_grande.jpg?v=1531504857" alt="logo"> -->
-      </div>
-      <div class="">
-
-      </div class="navbar-list">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
+    </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="https://www.youtube.com/watch?v=s0nO4q4MJ3A">Monorotaia</a></li>
+        <li><a href="#">Springfield</a></li>
+        <li><a class="icon">
+         <i class="fa fa-bars"></i></a></li>
+      </ul>
   </div>
+  <!-- NAVBAR -->
+
       <!-- CONTENITORE SUPERIORE -->
   <div class="wrapper">
     <h1 class="upper">calcola il prezzo del tuo biglietto</h1>
     <div class="form-dati">
         <!-- FORM DATI -->
       <div class="row">
+        <!-- PRIMA RIGA -->
         <div class="col">
-          <label for"nome" >Nome Cognome</label>
-          <input type="text" placeholder="inserisci">
+          <label for="nome">Nome Cognome</label>
+          <input id="nome" type="text" placeholder="Nome & Cognome">
         </div>
         <div class="col">
-          <label for"km">km</label>
-          <input type="number" placeholder="km">
+          <label for="km">Miglia da percorrere</label>
+          <input id="km" type="number" placeholder="n&deg; mi">
         </div>
         <div class="col">
-          <label for "eta">età</label>
-          <select name="" id="">
-            <option value="minorenne">minorenne</option>
-            <option value="maggiorenne">maggiorenne</option>
-            <option value="over">over65</option>
+          <label for="eta">Fascia d'età</label>
+          <select name="eta" id="eta">
+            <!-- QUESTI VALUE SERVIRANNO PER L' IF IN JS -->
+            <option value="minorenne">&lt; 18</option>
+            <option value="maggiorenne">&gt; 18</option>
+            <option value="over">&gt; 65</option>
           </select>
         </div>
       </div>
+        <!-- FINE PRIMA RIGA -->
         <!-- FINE FORM DATI -->
       <div class="row">
-        <div class="btn">Genera</div>
-        <div class="btn">Annulla</div>
+        <!-- SECONDA RIGA -->
+        <div class="btn btn-blu" id="genera">Genera</div>
+        <div class="btn btn-red" id="annulla">Annulla</div>
       </div>
+      <!-- FINE SECONDA RIGA -->
     </div>
   </div>
     <!-- FINE CONTENITORE SUPERIORE -->
     <!-- CONTENITORE INFERIORE -->
     <div class="contenitore-inferiore">
-      <h2 class="upper">il tuo biglietto</h2>
-      <div id="biglietto">
-
-
-      <div class="contenitore-dettaglio tx-sx">
-
-        <div class="dettaglio-biglietto row">
+      <h2 class="upper">il tuo biglietto...</h2>
+      <!-- BOX A COMPARSA E SCOMPARSA -->
+      <div id="ticket" class= "-hidden-">
+        <div class="contenitore-ticket tx-sx row">
           <div class="col">
-
-          </div>
-          <div class="col">
-            <table><h3 class="upper">dettaglio passeggero</h3>
+            <h3 class="upper">dettaglio passeggero</h3>
+            <table>
               <tr>
-                <th><h3>nome passeggero</h3></th>
-                <th>offerta</th>
-                <th>carrozza</th>
-                <th>codice cp</th>
-                <th>costo biglietto</th>
+                <th class="bgc" rowspan="2">Nome Passeggero<div id="nome-passeggero" class="bgc">Nome</div></th>
+                <th>Tariffa</th>
+                <th>Carrozza</th>
+                <th>Codice CP</th>
+                <th>Costo Biglietto</th>
               </tr>
-                <td><span id="nomeInput">Nome</span></td>
-                <td><span id="offerta-applicata">Sconto: </span></td>
+              <tr>
+                <td><span id="tariffa">Sconto: </span></td>
                 <td><span id="carrozza">n°</span></td>
-                <td><span id="codice-cp">00000</span></td>
-                <td><span id="costoBiglietto">$</span></td>
+                <td><span id="codice-cp">0</span></td>
+                <td><span id="costo">$</span></td>
+              </tr>
             </table>
           </div>
         </div>
       </div>
+      <!-- FINE BOX A COMPARSA E SCOMPARSA -->
     </div>
-  </div>
     <!-- FINE CONTENITORE INFERIORE -->
 
 
