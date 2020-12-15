@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <h1>calcola il prezzo del tuo biglietto</h1>
+    <h1 class="upper">calcola il prezzo del tuo biglietto</h1>
     <div class="form-dati">
 
       <div class="row">
@@ -33,34 +33,36 @@
       </div>
 
       <div class="row">
-        <div class="bnt">Genera</div>
-        <div class="bnt">Annulla</div>
+        <div class="btn">Genera</div>
+        <div class="btn">Annulla</div>
       </div>
     </div>
 
     <!-- DETTAGLIO -->
-      <h2>il tuo biglietto</h2>
+      <h2 class="upper">il tuo biglietto</h2>
       <div id="biglietto">
 
 
-      <div class="contenitore-dettaglio">
-        <h3>dettaglio passeggero</h3>
+      <div class="contenitore-dettaglio tx-sx">
+
         <div class="dettaglio-biglietto row">
           <div class="col">
-            <h3>nome passeggero</h3>
+
           </div>
           <div class="col">
-            <table>
+            <table><h3 class="upper">dettaglio passeggero</h3>
               <tr>
+                <th><h3>nome passeggero</h3></th>
                 <th>offerta</th>
                 <th>carrozza</th>
                 <th>codice cp</th>
                 <th>costo biglietto</th>
               </tr>
-                <td><span id="offerta-applicata"></span></td>
-                <td><span id="carrozza"></span></td>
-                <td><span ></span></td>
-                <td></td>
+                <td><span id="nomeInput">Nome</span></td>
+                <td><span id="offerta-applicata">Sconto: </span></td>
+                <td><span id="carrozza">n°</span></td>
+                <td><span id="codice-cp">00000</span></td>
+                <td><span id="costoBiglietto">$</span></td>
             </table>
           </div>
         </div>

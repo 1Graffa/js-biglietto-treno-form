@@ -10,9 +10,14 @@ body{
 }
 h1{
   color:white;
-  text-transform: uppercase;
   font-size: 30px;
   padding: 20px;
+}
+.upper{
+  text-transform: uppercase;
+}
+.tx-sx{
+  text-align: left;
 }
 .form-dati{
   background-color: white;
@@ -39,7 +44,7 @@ h1{
 }
 .btn{
   background-color: lightgrey;
-  color: lightblue;
+  color: violet;
   border-radius: 5px;
   border: 1px solid violet;
   padding: 5px;

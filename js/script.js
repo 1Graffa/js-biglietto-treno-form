@@ -6,8 +6,6 @@ var prodotto = km * 0.21 ;
 var costoBiglietto = 0.21 * distanza;
 
 
-
-//3)
 //calcolo scontistica in base all'età
 if (age < 18){
   costoBiglietto = (prodotto - (prodotto * 20 / 100));
