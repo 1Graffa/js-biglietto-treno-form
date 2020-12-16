@@ -8,12 +8,25 @@ function(){
   var distanza = document.getElementById('km').value;
   var age = document.getElementById('eta').value;
   //variabili con calcolo
-  var prodotto = km * 0.21 ;
   var costoBiglietto = 0.21 * distanza;
   var tipoTariffa = "Standard";
   var min = 10000;
   var max = 99999;
   var numeroRandom = Math.floor(Math.random() * (max - min + 1) ) + min;
+
+  //calcolo scontistica in base all'età
+  if (age == "minorenne"){
+    costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100);
+    tipoTariffa = "Young"
+  }
+  else if (age == "over"){
+    costoBiglietto = costoBiglietto - (costoBiglietto * 40 / 100);
+    tipoTariffa = "Senior"
+  }
+  else {
+    costoBiglietto = costoBiglietto;
+  }
+  document.getElementById('costo').innerHTML += Math.round(costoBiglietto) + "&#36;" ;
 
   // Stampa dei dati nel Biglietto
   // NOME PASSEGGERO
@@ -28,20 +41,6 @@ function(){
   document.getElementById("costo").innerHTML = costoBiglietto.toFixed(2) + " $";
   // SHOW
   document.getElementById("ticket").className = "show";
-  //calcolo scontistica in base all'età
-  if (age < 18){
-    costoBiglietto = prodotto - (prodotto * 20 / 100);
-    tariffa = "Young"
-  }
-  else if (age > 65){
-    costoBiglietto = prodotto - (prodotto * 40 / 100);
-    tariffa = "Senior"
-  }
-  else {
-    costoBiglietto = prodotto;
-    tariffa = "Standard"
-  }
-  document.getElementById('costoBiglietto').innerHTML += Math.round(costoBiglietto) + "&#36;" ;
 }
 );
 // ANNULLA
