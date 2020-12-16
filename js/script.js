@@ -10,7 +10,7 @@ function(){
   //variabili con calcolo
   var prodotto = km * 0.21 ;
   var costoBiglietto = 0.21 * distanza;
-  var tipoTariffa = "Standard"
+  var tipoTariffa = "Standard";
   var min = 10000;
   var max = 99999;
   var numeroRandom = Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -19,15 +19,15 @@ function(){
   // NOME PASSEGGERO
   document.getElementById("nome-passeggero").innerHTML = nomeInput;
   //TARIFFA
-  document.getElementById("tariffa").innerHTML = nomeInput;
+  document.getElementById("tariffa").innerHTML = tipoTariffa;
   // CARROZZA
   document.getElementById("carrozza").innerHTML = Math.floor(Math.random()*9) +1;
   // CODICE CP RANDOM 99999
   document.getElementById("codice-cp").innerHTML = Math.floor(Math.random() * (max - min + 1) ) + min;
-  document.
   // COSTO DEL BIGLIETTO CON EVENTUALE SCONTO
   document.getElementById("costo").innerHTML = costoBiglietto.toFixed(2) + " $";
-
+  // SHOW
+  document.getElementById("ticket").className = "show";
   //calcolo scontistica in base all'età
   if (age < 18){
     costoBiglietto = prodotto - (prodotto * 20 / 100);
@@ -42,9 +42,6 @@ function(){
     tariffa = "Standard"
   }
   document.getElementById('costoBiglietto').innerHTML += Math.round(costoBiglietto) + "&#36;" ;
-  // SHOW
-  // document.getElementById("ticket").className = "show";
-
 }
 );
 // ANNULLA
@@ -68,6 +65,6 @@ function(){
   // COSTO DEL BIGLIETTO CON EVENTUALE SCONTO
   document.getElementById("costo").innerHTML = " ";
   // HIDDEN
-  // document.getElementById("ticket").className = "hidden";
+  document.getElementById("ticket").className = "hidden";
 }
 );
